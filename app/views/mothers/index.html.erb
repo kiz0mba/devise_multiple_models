@@ -1,0 +1,24 @@
+<h1>Listing mother</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mothers.each do |mother| %>
+  <tr>
+    <td><%= "Name: #{mother.name}" %></td>
+    <td><%= "Email: #{mother.email}" %></td>
+    <td><%= "Type: #{mother.type}" %></td>
+    <td><%= link_to 'Show', mother %></td>
+    <td><%= link_to 'Edit', edit_mother_path(@mother) %></td>
+    <td><%= link_to 'Destroy', mother, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New @mother', new_@mother_path %>
